@@ -1,26 +1,89 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme  {
+  /* Brand */
+  --color-primary: #f38e82;
+  --color-primary-hover: #ec7b6d;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-gradient-from: #fbdb89;
+  --color-gradient-to: #f48982;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Semantic */
+  --color-background: #faf7f5;
+  --color-surface: #ffffff;
+
+  --color-foreground: #615551;
+  --color-muted: #918581;
+
+  --color-border: #f2efee;
+  --color-placeholder: #d3c7c3;
+
+  /* Shadow */
+  --shadow-card: 0 2rem 6rem rgba(97, 85, 81, 0.2);
+}
+.dark {
+  --color-background: #181614;
+  --color-surface: #24201e;
+
+  --color-foreground: #f9f5f3;
+  --color-muted: #b8aaa5;
+
+  --color-border: #3b3532;
+  --color-placeholder: #7b6f6a;
+
+  --color-primary: #f38e82;
+  --color-primary-hover: #f6a092;
+
+  --color-gradient-from: #f8c96a;
+  --color-gradient-to: #f38e82;
+
+  --shadow-card: 0 2rem 6rem rgba(0, 0, 0, 0.35);
+}
+:root{
+  color-scheme: light;
+}
+.dark{
+  color-scheme: dark;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+*{
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  font-family: "Nunito Sans", sans-serif;
+  line-height: 1.6;
+  color: var(--color-foreground);
+  background-image: linear-gradient(
+          to right bottom,
+          var(--color-gradient-from),
+          var(--color-gradient-to)
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
