@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
     return (
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center bg-gradient-to-br from-[var(--color-gradient-from)] to-[var(--color-gradient-to)]">
         <div className="my-[4vw] w-full max-w-[120rem] min-h-[117rem] overflow-hidden rounded-[9px] bg-surface shadow-card">
             <header
                 className="
