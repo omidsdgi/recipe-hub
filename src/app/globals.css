@@ -11,7 +11,6 @@
     font-family: "Nunito Sans", sans-serif;
   }
 }
-
 @theme  {
   /* Brand */
   --color-primary: #f38e82;
@@ -61,10 +60,6 @@
 *:before,
 *:after {
   box-sizing: border-box;
-}
-*{
-  margin: 0;
-  padding: 0;
 }
 
 body {
