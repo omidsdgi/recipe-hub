@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+@layer base {
+  html {
+    min-height: 100%;
+    font-size: 62.5%;
+  }
+
+  body {
+    min-height: calc(100vh - 8vw);
+    font-family: "Nunito Sans", sans-serif;
+  }
+}
+
 @theme  {
   /* Brand */
   --color-primary: #f38e82;
@@ -56,8 +68,6 @@
 }
 
 body {
-  min-height: 100vh;
-  font-family: "Nunito Sans", sans-serif;
   line-height: 1.6;
   color: var(--color-foreground);
   background-image: linear-gradient(
