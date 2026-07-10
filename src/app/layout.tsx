@@ -11,7 +11,7 @@ const nunitoSans = Nunito_Sans({
 
 const pasifico=Pacifico({
   weight:"400",
-  variable:"--font-pasifico",
+  variable:"--font-heading",
   subsets:["latin"],
   display:"swap",
 })
@@ -30,7 +30,7 @@ export default function RootLayout({
       lang="en"
       className={`${nunitoSans.variable} ${pasifico.variable}`}
     >
-      <body className={pasifico.className} >
+      <body >
       {children}
       </body>
     </html>
