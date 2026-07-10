@@ -6,8 +6,9 @@
     font-size: 62.5%;
   }
   body {
+    font-family: var(--font-body);
+    font-weight: bold;
     min-height: 100vh;
-    font-family: "Nunito Sans", sans-serif;
     line-height: 1.6;
     color: var(--color-foreground);
     background: transparent;
@@ -63,9 +64,9 @@
   *:after {
     box-sizing: border-box;
   }
-  html{
-
-  }
+.logo {
+  font-family: var(--font-heading), cursive;
+}
 
   img,
   picture,
