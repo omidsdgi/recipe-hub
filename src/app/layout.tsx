@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
-import {Nunito_Sans, Pacifico} from "next/font/google";
+import {Nunito_Sans, Pacifico, Figtree } from "next/font/google";
 import "./globals.css";
 import React from "react";
+import { cn } from "@/lib/utils";
+
+const figtree = Figtree({subsets:['latin'],variable:'--font-sans'});
 
 const nunitoSans = Nunito_Sans({
   subsets: ["latin"],
@@ -28,7 +31,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${nunitoSans.variable} ${pasifico.variable}`}
+      className={cn(nunitoSans.variable, pasifico.variable, "font-sans", figtree.variable)}
     >
       <body >
       {children}
