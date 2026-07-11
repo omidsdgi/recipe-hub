@@ -1,1 +1,1 @@
-export {Logo} from './layout'
+export {Logo} from './layout/header'
