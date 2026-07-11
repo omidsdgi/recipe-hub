@@ -32,7 +32,7 @@ const buttonVariants = cva(
         "icon-sm": "size-8",
         "icon-lg": "size-10",
         recipe:
-            `h-22 px-14 !text-2xl font-semibold rounded-full `,
+            `h-22 px-14 font-semibold rounded-full `,
       },
     },
     defaultVariants: {
