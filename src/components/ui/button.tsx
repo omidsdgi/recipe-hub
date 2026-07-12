@@ -19,7 +19,7 @@ const buttonVariants = cva(
           "bg-destructive/10 text-destructive hover:bg-destructive/20 focus-visible:border-destructive/40 focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:hover:bg-destructive/30 dark:focus-visible:ring-destructive/40",
         link: "text-primary underline-offset-4 hover:underline",
         recipe:
-            `h-24 lg:h-28 bg-gradient-to-r from-[var(--color-gradient-from)] to-[var(--color-gradient-to)] text-surface uppercase hover:scale-105`
+            `h-24 lg:h-28 bg-gradient-to-r from-[var(--gradient-from)] to-[var(--gradient-to)] text-surface uppercase hover:scale-105`
             },
       size: {
         default:
