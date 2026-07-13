@@ -4,11 +4,11 @@ import {SearchIcon} from "lucide-react";
 
 const SearchForm = () => {
     return (
-        <form className="flex lg:h-24 w-full lg:max-w-3xl text-xl lg:text-2xl lg:font-semibold items-center rounded-full bg-surface shadow-card " >
+        <form className="flex lg:h-24 w-full lg:max-w-3xl text-xl lg:text-2xl lg:font-semibold items-center rounded-full bg-card shadow-card " >
             <Input
                 type="search"
                 placeholder="Search over 1,000,000 recipes..."
-                className='flex-1 border-0 bg-transparent px-12 mb-4 font-normal text-foreground placeholder:text-placeholder shadow-none focus-visible:ring-0 focus-visible:ring-offset-0'
+                className='flex-1 border-0 bg-card px-12 mb-4 font-normal text-foreground placeholder:text-placeholder shadow-none focus-visible:ring-0 focus-visible:ring-offset-0'
             />
             <Button
             type="submit"
