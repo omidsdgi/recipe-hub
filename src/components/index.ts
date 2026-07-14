@@ -1,1 +1,2 @@
-export {Logo} from './layout/header'
+export * from './theme'
+export * from './layout'
