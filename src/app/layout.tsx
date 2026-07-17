@@ -3,6 +3,7 @@ import {Nunito_Sans, Pacifico, Figtree } from "next/font/google";
 import "./globals.css";
 import React from "react";
 import { cn } from "@/lib/utils";
+import {DarkModeProvider} from "@/context/DarkModeContext";
 
 const figtree = Figtree({subsets:['latin'],variable:'--font-sans'});
 
@@ -31,10 +32,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn(nunitoSans.variable, pasifico.variable, "font-sans", figtree.variable)}
+      className={ cn(nunitoSans.variable, pasifico.variable, "font-sans", figtree.variable)}
     >
       <body >
+      <DarkModeProvider>
       {children}
+      </DarkModeProvider>
       </body>
     </html>
   );
