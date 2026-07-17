@@ -1,3 +1,5 @@
+'use client'
+
 import {createContext, ReactNode, useContext} from "react";
 import {Theme} from "@/lib/ThemeCore";
 import {useTheme} from "@/hooks/useTheme";
