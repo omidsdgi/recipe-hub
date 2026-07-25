@@ -1,9 +1,9 @@
-import {Recipe} from "@/types/Recipe";
+import {RecipeType} from "@/types/Recipe";
 import {useEffect, useState} from "react";
 import {getRecipe} from "@/services/RecipeService";
 
 export function useRecipe(id: string) {
-    const [recipe, setRecipe] = useState<Recipe | null>(null)
+    const [recipe, setRecipe] = useState<RecipeType | null>(null)
     const [isLoading, setIsLoading] = useState(true)
     const [error, setError] = useState("")
 

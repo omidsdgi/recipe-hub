@@ -1,9 +1,9 @@
-import type {Recipe} from "@/types/Recipe";
+import {RecipeType} from "@/types/Recipe";
 
-const Recipe = ({recipe}:{recipe:Recipe}) => {
+const Recipe = ({recipe}:{recipe:RecipeType}) => {
     return (
         <div>
-            {recipe.title} 
+            {recipe.title}
         </div>
     );
 };

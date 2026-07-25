@@ -4,7 +4,7 @@ export interface Ingredient {
     description:string;
 }
 
-export interface Recipe {
+export interface RecipeType {
     id: string;
     title: string;
     publisher: string;
