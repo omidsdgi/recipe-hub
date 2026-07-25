@@ -1,7 +1,12 @@
+
 import {Header} from "@/components/layout";
+import {getRecipe} from "@/services/RecipeService";
 
 
-export default function Home() {
+export default async function Home() {
+    const recipe =await getRecipe("664c8f193e7aa067e94e8823")
+    console.log(recipe)
+
     return (
         <div
             className="flex items-center justify-center bg-gradient-to-br from-[var(--gradient-from)] to-[var(--gradient-to)]">
@@ -18,6 +23,7 @@ export default function Home() {
                         right
                     </section>
                 </main>
+                {/*<RecipeHero image='/Maryam.jpg' title='mehraneh'/>*/}
             </div>
         </div>
     );
