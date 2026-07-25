@@ -1,11 +1,11 @@
 
 import {Header} from "@/components/layout";
 import {getRecipe} from "@/services/RecipeService";
+import {Recipe} from "@/recipe";
 
 
 export default async function Home() {
     const recipe =await getRecipe("664c8f193e7aa067e94e8823")
-    console.log(recipe)
 
     return (
         <div
@@ -20,7 +20,7 @@ export default async function Home() {
                     </section>
 
                     <section className=" bg-muted p-8 text-3xl">
-                        right
+                        <Recipe recipe={recipe} />
                     </section>
                 </main>
                 {/*<RecipeHero image='/Maryam.jpg' title='mehraneh'/>*/}
