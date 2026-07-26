@@ -1,8 +1,8 @@
-import {Recipe} from "@/types/Recipe";
+import {RecipeType} from "@/types/Recipe";
 
 const API_URL = "https://forkify-api.jonas.io/api/v2/recipes";
 
-export async function getRecipe(id: string): Promise<Recipe> {
+export async function getRecipe(id: string): Promise<RecipeType> {
     const res = await fetch(`${API_URL}/${id}`);
 
     if (!res.ok) throw new Error("Failed to fetch recipe");
