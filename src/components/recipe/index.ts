@@ -1,1 +1,6 @@
+export {default as Recipe} from './Recipe'
 export {default as RecipeHero} from './RecipeHero'
+export {default as RecipeDetails} from './RecipeDetails'
+export {default as IngredientList} from './IngredientList'
+export {default as IngredientItem} from './IngredientItem'
+export {default as RecipeDirections} from './RecipeDirections'
