@@ -21,6 +21,8 @@ export function useRecipe(id: string) {
                 setIsLoading(false)
             }
         }
-      void  loadRecipe()
+        void  loadRecipe()
     },[id])
+    return {recipe, isLoading, error}
 }
+
