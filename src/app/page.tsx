@@ -7,7 +7,7 @@ import {Recipe} from "@/components";
 export default async function Home() {
     return (
         <div
-            className="flex items-center justify-center bg-gradient-to-br from-[var(--gradient-from)] to-[var(--gradient-to)]">
+            className="flex items-center justify-center bg-gradient-to-br from-gradient-from to-gradient-to">
             <div
                 className="my-[4vw] sm:my-6 lg:my-[4vw] w-full max-w-[140rem] lg:min-h-[117rem] overflow-hidden rounded-none sm:roundede:lg lg:rounded-xl bg-surface shadow-card">
                 <Header/>

@@ -50,8 +50,8 @@
   }
 }
 @theme {
-  --gradient-from: #fbdb89;
-  --gradient-to: #f48982;
+  --color-gradient-from: #fbdb89;
+  --color-gradient-to: #f48982;
 
   --shadow-card: 0 2rem 6rem rgba(97, 85, 81, 0.2);
 
