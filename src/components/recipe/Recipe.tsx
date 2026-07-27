@@ -12,10 +12,10 @@ const Recipe = () => {
 
     return (
         <article className='flex flex-col h-full bg-muted px-8 text-3xl '>
-            <RecipeHero/>
-            <RecipeDetails/>
-            <IngredientList/>
-            <RecipeDirections/>
+            <RecipeHero recipe={recipe} />
+            <RecipeDetails recipe={recipe}/>
+            <IngredientList recipe={recipe}/>
+            <RecipeDirections recipe={recipe}/>
         </article>
     );
 };
