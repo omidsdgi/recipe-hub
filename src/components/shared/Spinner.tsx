@@ -1,4 +1,4 @@
-import {LoaderPinwheel} from "lucide-react";
+import { Sun} from "lucide-react";
 
 export default function Spinner() {
     return (
@@ -7,7 +7,7 @@ export default function Spinner() {
             aria-live="polite"
             className="flex items-start justify-center py-24"
         >
-            <LoaderPinwheel   className="size-20 animate-spin text-primary" />
+            <Sun   className="size-20 animate-spin text-primary" />
             <span className="sr-only">Loading...</span>
         </div>
     );
