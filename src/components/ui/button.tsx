@@ -19,7 +19,9 @@ const buttonVariants = cva(
           "bg-destructive/10 text-destructive hover:bg-destructive/20 focus-visible:border-destructive/40 focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:hover:bg-destructive/30 dark:focus-visible:ring-destructive/40",
         link: "text-primary underline-offset-4 hover:underline",
         recipe:
-            `h-24 lg:h-24 bg-gradient-to-r from-gradient-from to-gradient-to text-surface uppercase hover:scale-105`
+            "h-24 bg-gradient-to-r from-gradient-from to-gradient-to text-surface uppercase hover:scale-105",
+        bookmark:
+            "h-10 rounded-full bg-gradient-to-br from-gradient-from to-gradient-to text-surface uppercase hover:scale-105"
             },
       size: {
         default:
@@ -31,7 +33,7 @@ const buttonVariants = cva(
         "icon-xs": "size-6 [&_svg:not([class*='size-'])]:size-3",
         "icon-sm": "size-8",
         "icon-lg": "size-10",
-        "icon-5xl":"size-20",
+        "icon-5xl":"size-18",
         recipe:
             ` px-14 font-semibold rounded-full text-primary-foreground `,
       },
