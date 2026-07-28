@@ -10,7 +10,7 @@ const RecipeDetails = ({recipe}:RecipeDetailsProps) => {
     const{cookingTime, servings}=recipe
     return (
 
-        <section className="flex items-center justify-evenly border-b border-border mt-20 px-10 py-8 ">
+        <section className="flex items-center justify-between w-full  py-[7.5rem] px-[8rem] ">
             {/*left*/}
             <div className="flex items-center gap-22">
                 {/*cooking time*/}
@@ -45,10 +45,10 @@ const RecipeDetails = ({recipe}:RecipeDetailsProps) => {
                     </div>
             </div>
                 {/*right*/}
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-10">
                     <User size='24' className="text-primary" />
-                    <Button size='icon-5xl' className='rounded-full bg-gradient-to-br from-graient-from to-gradient-to ' arial-label="Bookmark recipe" >
-                        <Bookmark className='size-8 fill-background ' />
+                    <Button size='icon-5xl' variant='bookmark' aria-label="Bookmark recipe" >
+                        <Bookmark className='size-10 fill-background stroke-background' />
                     </Button>
 
             </div>
