@@ -11,7 +11,7 @@ const Recipe = () => {
     if(!recipe) return null
 
     return (
-        <article className='flex flex-col h-full bg-muted px-8 text-3xl '>
+        <article className='flex flex-col h-full w-full bg-muted text-3xl '>
             <RecipeHero recipe={recipe} />
             <RecipeDetails recipe={recipe}/>
             <IngredientList recipe={recipe}/>
