@@ -1,4 +1,4 @@
-export interface Ingredient {
+export interface IngredientType {
     quantity:number;
     unit:string;
     description:string;
@@ -12,5 +12,5 @@ export interface RecipeType {
     image: string;
     servings: number;
     cookingTime: number;
-    ingredients:Ingredient[];
+    ingredients:IngredientType[];
 }
