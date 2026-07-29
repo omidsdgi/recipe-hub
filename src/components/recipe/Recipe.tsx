@@ -14,7 +14,7 @@ const Recipe = () => {
         <article className='flex flex-col h-full w-full bg-muted text-3xl '>
             <RecipeHero recipe={recipe} />
             <RecipeDetails recipe={recipe}/>
-            <IngredientList recipe={recipe}/>
+            <IngredientList ingredients={recipe.ingredients}/>
             <RecipeDirections recipe={recipe}/>
         </article>
     );
