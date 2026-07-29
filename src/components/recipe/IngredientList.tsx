@@ -6,11 +6,11 @@ interface IngredientsProps {
 }
 const IngredientList = ({ingredients}:IngredientsProps) => {
     return (
-        <section>
-            <h2>
+        <section className=" px-[8rem] py-[3rem] ">
+            <h2 className='mb-10 text-3xl font-bold text-primary uppercase tracking-wide text-center'>
                 Recipe Ingredients
             </h2>
-            <ul>
+            <ul className="grid md:grid-cols-2 gap-12">
                 {ingredients.map((ingredient,index) => (
                       <IngredientItem ingredient={ingredient} key={`${ingredient.description}-${index}`} />
                 ))}
