@@ -52,7 +52,7 @@
 @theme {
   --color-gradient-from: #fbdb89;
   --color-gradient-to: #f48982;
-
+  --color-section: #e3dbd8;
   --shadow-card: 0 2rem 6rem rgba(97, 85, 81, 0.2);
 
   --color-placeholder: #d3c7c3;
@@ -82,6 +82,7 @@
   --accent-foreground: #615551;
 
   --destructive: #dc2626;
+
 
   --border: #f2efee;
   --input: #f2efee;
