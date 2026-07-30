@@ -15,7 +15,7 @@ const Recipe = () => {
             <RecipeHero recipe={recipe} />
             <RecipeDetails recipe={recipe}/>
             <IngredientList ingredients={recipe.ingredients}/>
-            <RecipeDirections recipe={recipe}/>
+            <RecipeDirections publisher={recipe.publisher} sourceUrl={recipe.sourceUrl} />
         </article>
     );
 };
