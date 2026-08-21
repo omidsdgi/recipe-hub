@@ -1,7 +1,7 @@
 
 import {Header} from "@/components/layout";
-import {Sidebar} from "@/sidebar";
 import {Recipe} from "@/components";
+import {SearchResult} from "@/searchResult";
 
 
 export default async function Home() {
@@ -13,7 +13,7 @@ export default async function Home() {
                 <Header/>
                 <main
                     className=" grid min-h-[107rem] grid-cols-[1fr_2fr] " >
-                   <Sidebar/>
+                   <SearchResult/>
                     <Recipe/>
                 </main>
             </div>

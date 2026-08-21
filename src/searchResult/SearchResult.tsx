@@ -1,9 +1,9 @@
-const Sidebar = () => {
+const SearchResult = () => {
     return (
         <section className="bg-card p-8 text-3xl">
-            sidebar
+            <h1>searchResult</h1>
         </section>
     );
 };
 
-export default Sidebar;
+export default SearchResult;
