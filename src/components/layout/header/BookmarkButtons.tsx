@@ -1,7 +1,7 @@
 import {NavButton} from "@/components/layout";
 import {Bookmark, SquarePen} from "lucide-react";
 
-const Navigation = () => {
+const BookmarkButtons = () => {
     return (
         <nav>
             <ul className="flex h-full item-stretch">
@@ -22,4 +22,4 @@ const Navigation = () => {
     );
 };
 
-export default Navigation;
+export default BookmarkButtons;

@@ -1,5 +1,5 @@
-import {Logo} from "@/components";
-import {Navigation, SearchForm, ThemeToggle} from "@/components/layout";
+import {BookmarkButtons, Logo} from "@/components";
+import {SearchForm, ThemeToggle} from "@/components/layout";
 
 const Header = () => {
     return (
@@ -9,7 +9,7 @@ const Header = () => {
             <SearchForm/>
             <div className="flex items-center gap-4">
                 <ThemeToggle/>
-                <Navigation/>
+                <BookmarkButtons/>
             </div>
         </header>
     );
