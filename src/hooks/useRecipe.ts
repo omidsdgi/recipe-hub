@@ -11,11 +11,13 @@ export function useRecipe(id: string) {
         async function loadRecipe() {
             try{
                 setIsLoading(true);
+                setError("")
+
                 const data=await getRecipe(id)
                 setRecipe(data)
             }catch(err){
                 if (err instanceof Error) {
-                    setError('Something went wrong')
+                    setError(err.message    )
                 }
             }finally {
                 setIsLoading(false)
