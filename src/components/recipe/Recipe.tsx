@@ -2,10 +2,12 @@
 
 import {useRecipe} from "@/hooks/useRecipe";
 import {Spinner, Error, RecipeHero, RecipeDetails, IngredientList, RecipeDirections} from "@/components";
+import EmptyState from "@/components/shared/EmptyState";
 
 const Recipe = () => {
-    const {recipe, isLoading, error}=useRecipe("664c8f193e7aa067e94e8823")
+    const {recipe, isLoading, error}=useRecipe("")
 
+    if (!isLoading && !error && !recipe) return <EmptyState/>
     if (isLoading) return <Spinner/>
     if (error) return <Error message={error} />
     if(!recipe) return null

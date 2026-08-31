@@ -4,11 +4,12 @@ import {getRecipe} from "@/services/RecipeService";
 
 export function useRecipe(id: string) {
     const [recipe, setRecipe] = useState<RecipeType | null>(null)
-    const [isLoading, setIsLoading] = useState(true)
+    const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState("")
 
     useEffect(() => {
         async function loadRecipe() {
+            if (!id) return
             try{
                 setIsLoading(true);
                 setError("")
