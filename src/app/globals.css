@@ -52,7 +52,7 @@
 @theme {
   --color-gradient-from: #fbdb89;
   --color-gradient-to: #f48982;
-  --color-section: #e3dbd8;
+  --color-section: var(--section);
   --shadow-card: 0 2rem 6rem rgba(97, 85, 81, 0.2);
 
   --color-placeholder: #d3c7c3;
@@ -62,6 +62,8 @@
 
   --background: #faf7f5;
   --foreground: #615551;
+
+  --section: #e3dbd8
 
   --card: #ffffff;
   --card-foreground: #615551;
@@ -96,6 +98,7 @@
 
   --background: #181614;
   --foreground: #f9f5f3;
+  --section: #302b29;
 
   --card: #24201e;
   --card-foreground: #f9f5f3;
