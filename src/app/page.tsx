@@ -1,8 +1,6 @@
 
 import {Header} from "@/components/layout";
-import {Recipe} from "@/components";
-import {SearchResult} from "@/searchResult";
-
+import {Hash} from "@/searchResult";
 
 export default async function Home() {
     return (
@@ -13,8 +11,7 @@ export default async function Home() {
                 <Header/>
                 <main
                     className=" grid min-h-[107rem] grid-cols-[1fr_2fr] " >
-                   <SearchResult/>
-                    <Recipe/>
+                 <Hash/>
                 </main>
             </div>
         </div>
