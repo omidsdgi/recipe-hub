@@ -15,7 +15,7 @@ const Hash = () => {
         window.addEventListener(ev,useRecipe)
         )
         return () => ['hashchange', 'load'].forEach(ev=>
-            window.removeEventListener('hashchange', useRecipe)
+            window.removeEventListener(ev, useRecipe)
         )
     },[])
 
