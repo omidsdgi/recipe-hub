@@ -28,7 +28,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "**/*.mts"
+    "**/*.mts",
+    "node_modules/.pnpm/fractional@1.0.0/node_modules/fractional/releases/fraction-0.1.js"
   ],
   "exclude": ["node_modules"]
 }
