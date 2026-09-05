@@ -12,7 +12,7 @@ const IngredientItem = ({ingredient}: IngredientItemProps) => {
 
         <li className="grid grid-cols-[2.4rem_4rem_1fr] items-start ">
             <Check className='mt-1 size-8 shrink-0 text-primary' strokeWidth={2}/>
-            <span className="text-2xl font-medium text-foreground">{new Fraction (quantity) ?? 'null'}</span>
+            <span className="text-2xl font-medium text-foreground">{new Fraction (quantity).toString() ?? 'null'}</span>
             <p className="text-2xl leading-8 text-foreground">{quantity}
                 {unit && (
                     <span className='mr-2 font-semibold '>{unit}
