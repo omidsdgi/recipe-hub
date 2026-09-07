@@ -1,4 +1,4 @@
-export function Timeout(s:number):Promise<never> {
+export function timeout(s:number):Promise<never> {
     return  new Promise((_,reject)=>{
         setTimeout(()=>{
             reject(
