@@ -1,6 +1,6 @@
 
 import {Header} from "@/components/layout";
-import RecipePage from "@/components/RecipePage";
+import {RecipePage} from "@/components";
 
 export default async function Home() {
     return (
