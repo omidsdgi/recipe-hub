@@ -9,7 +9,10 @@ interface SearchFormProps {
     isLoading?:boolean;
 }
 
-const SearchForm = ({onSearch, isLoading}:SearchFormProps) => {
+const SearchForm = ({
+                        onSearch,
+                        isLoading=false,
+}:SearchFormProps) => {
     const [query, setQuery] = useState("")
 
     function handleSubmit(e:React.SubmitEvent<HTMLFormElement>) {
