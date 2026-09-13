@@ -11,12 +11,12 @@ export  interface SearchResultType{
 
 export async function getRecipe(id: string): Promise<RecipeType> {
     const res = await Promise.race([
-        fetch(`${API_URL}${id}`),
+        fetch(`${API_URL}${encodeURIComponent(id)}`),
         timeout(TIMEOUT_SEC)
     ])
     const data = await res.json();
 
-    if (!res.ok) throw new Error(`${data.message}${res.status}`);
+    if (!res.ok) throw new Error(data.message || `Request failed with status ${res.status}`);
 
     console.log(data)
     const {recipe} = data.data;
@@ -37,13 +37,13 @@ export async function loadSearchResults  (
     query:string
 ):Promise<SearchResultType[]>  {
     const res = await Promise.race([
-        fetch(`${API_URL}?search=${query}`),
+        fetch(`${API_URL}?search=${encodeURIComponent(query)}`),
         timeout(TIMEOUT_SEC)
     ])
 
     const data = await res.json();
 
-    if (!res.ok) throw new Error(`${data.message}${res.status}`);
+    if (!res.ok) throw new Error(data.message || `Request failed with status ${res.status}`);
     console.log(data.data.recipes);
 
     return data.data.recipes.map(
