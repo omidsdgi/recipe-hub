@@ -1,31 +1,55 @@
-import {RecipeType} from "@/types/Recipe";
-import {useEffect, useState} from "react";
-import {getRecipe} from "@/services/RecipeService";
+import { RecipeType } from "@/types/Recipe";
+import { useEffect, useState } from "react";
+import { getRecipe } from "@/services/RecipeService";
 
 export function useRecipe(id: string) {
-    const [recipe, setRecipe] = useState<RecipeType | null>(null)
-    const [isLoading, setIsLoading] = useState(false)
-    const [error, setError] = useState("")
+    const [recipe, setRecipe] = useState<RecipeType | null>(null);
+    const [error, setError] = useState<{
+        id: string;
+        message: string;
+    } | null>(null);
 
     useEffect(() => {
-        async function loadRecipe() {
-            if (!id) return
-            try{
-                setIsLoading(true);
-                setError("")
+        if (!id) return;
 
-                const data=await getRecipe(id)
-                setRecipe(data)
-            }catch(err){
+        let cancelled = false;
+
+        async function loadRecipe() {
+            try {
+                const data = await getRecipe(id);
+
+                if (cancelled) return;
+
+                setRecipe(data);
+            } catch (err) {
+                if (cancelled) return;
+
                 if (err instanceof Error) {
-                    setError(err.message    )
+                    setError({
+                        id,
+                        message: err.message,
+                    });
                 }
-            }finally {
-                setIsLoading(false)
             }
         }
-        void  loadRecipe()
-    },[id])
-    return {recipe, isLoading, error}
-}
 
+        void loadRecipe();
+
+        return () => {
+            cancelled = true;
+        };
+    }, [id]);
+
+    const currentError = error?.id === id ? error.message : "";
+
+    const isLoading =
+        Boolean(id) &&
+        recipe?.id !== id &&
+        !currentError;
+
+    return {
+        recipe: recipe?.id === id ? recipe : null,
+        isLoading,
+        error: currentError,
+    };
+}
