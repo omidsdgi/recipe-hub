@@ -6,18 +6,17 @@ export function useSearch() {
     const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState("")
 
-    async function search(query: string='pizza') {
+    async function search(query: string) {
         if(!query.trim()) return
-        try{
+        try {
             setIsLoading(true)
             setError("")
+            setResults([])
+
             const data = await loadSearchResults(query.trim())
             setResults(data)
-
-        } catch(err){
-            if (err instanceof Error) {
-                setError(err.message)
-            }
+        } catch (err) {
+            setError(err instanceof Error ? err.message : "Failed to load search results.")
         } finally {
             setIsLoading(false)
         }
