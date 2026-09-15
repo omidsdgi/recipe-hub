@@ -28,17 +28,15 @@ const RecipeDetails = ({recipe}:RecipeDetailsProps) => {
                     {/*servings*/}
                     <div className="flex items-center gap-3">
                         <User size={24} className="text-primary" />
-                        <div className="flex items-baseline gap-2 ">
-                            <span className="text-2xl font-semibold">22</span>
-                            <span className="text-2xl font-semibold ">
-                                {servings}
-                            </span>
+                        <div className="flex items-baseline gap-2">
+                            <span className="text-2xl font-semibold">{servings}</span>
+                            <span className="text-2xl font-semibold">servings</span>
                         </div>
                         <div className="ml-4 flex items-center gap-2">
-                            <Button size="icon" variant='ghost' className='rounded-full' arial-label="Decrease servings" >
+                            <Button size="icon" variant='ghost' className='rounded-full' aria-label="Decrease servings" >
                                 <MinusCircle className='size-8 text-primary' />
                             </Button>
-                            <Button size="icon" variant='ghost' className='rounded-full' arial-label="Increase servings" >
+                            <Button size="icon" variant='ghost' className='rounded-full' aria-label="Increase servings" >
                                 <PlusCircle className='size-8 text-primary' />
                             </Button>
                         </div>
