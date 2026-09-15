@@ -1,4 +1,3 @@
-import {Button} from "@base-ui/react";
 import {ArrowRight} from "lucide-react";
 
 interface RecipeDirectionsProps {
@@ -15,7 +14,7 @@ const RecipeDirections = ({
                 How to cook it
             </h2>
 
-            <p className="mb-10 max-w-3xl text-2xl leadivg-relaxed text-muted-foreground">
+            <p className="mb-10 max-w-3xl text-2xl leading-relaxed text-muted-foreground">
                 This recipe was carefully designed and tested {" "}
                 <span className="font-bold text-foreground">
                     {publisher}
