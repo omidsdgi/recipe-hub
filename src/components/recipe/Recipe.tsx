@@ -1,21 +1,20 @@
-'use client'
+import {RecipeType} from "@/types/Recipe";
+import RecipeHero from "./RecipeHero";
+import RecipeDetails from "./RecipeDetails";
+import IngredientList from "./IngredientList";
+import RecipeDirections from "./RecipeDirections";
 
-import {useRecipe} from "@/hooks/useRecipe";
-import {Spinner, Error, RecipeHero, RecipeDetails, IngredientList, RecipeDirections} from "@/components";
+interface RecipeProps {
+    recipe: RecipeType;
+}
 
-const Recipe = ({id}:{id:string}) => {
-    const {recipe, isLoading, error}=useRecipe(id)
-
-    if (isLoading) return <Spinner/>
-    if (error) return <Error message={error} />
-    if(!recipe) return null
-
+const Recipe = ({recipe}: RecipeProps) => {
     return (
-        <article className='flex flex-col h-full w-full bg-muted text-3xl '>
+        <article className="flex h-full w-full flex-col bg-muted text-3xl">
             <RecipeHero recipe={recipe} />
             <RecipeDetails recipe={recipe}/>
             <IngredientList ingredients={recipe.ingredients}/>
-            <RecipeDirections publisher={recipe.publisher} sourceUrl={recipe.sourceUrl} />
+            <RecipeDirections publisher={recipe.publisher} sourceUrl={recipe.sourceUrl}/>
         </article>
     );
 };
