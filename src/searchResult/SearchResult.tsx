@@ -10,6 +10,11 @@ interface SearchResultProps {
 
 const SearchResult = ({results, isLoading}: SearchResultProps) => {
     const [currPage, setCurrPage] = useState(1)
+
+    const startIndex=(currPage-1)*RESULTS_PER_PAGE;
+    const endIndex=startIndex + RESULTS_PER_PAGE;
+
+    const currentPageResults = results.slice(startIndex, endIndex);
     if (isLoading) {
         return (
             <section className="bg-secondary">
@@ -23,7 +28,7 @@ const SearchResult = ({results, isLoading}: SearchResultProps) => {
     return (
         <section className="bg-card bg-section p-8 text-3xl">
             <ul className="bg-section px-6 py-8">
-                {results.map((recipe) => (
+                {currentPageResults.map((recipe) => (
                     <li key={recipe.id}>
                         <a
                             href={`#${encodeURIComponent(recipe.id)}`}
