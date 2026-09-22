@@ -1,6 +1,7 @@
 import {Spinner} from "@/components";
 import {SearchResultType} from "@/services/RecipeService";
 import {RESULTS_PER_PAGE} from "@/config/constants";
+import {useState} from "react";
 
 interface SearchResultProps {
     results: SearchResultType[];
@@ -8,6 +9,7 @@ interface SearchResultProps {
 }
 
 const SearchResult = ({results, isLoading}: SearchResultProps) => {
+    const [currPage, setCurrPage] = useState(1)
     if (isLoading) {
         return (
             <section className="bg-secondary">
@@ -48,9 +50,10 @@ const SearchResult = ({results, isLoading}: SearchResultProps) => {
             <div className="flex justify-center px-6 py-6">
                 <button
                 type="button"
+                onClick={() => setCurrPage(currPage + 1)}
                 className="rounded-full bg-primary px-6 py-3 text-xl font-semibold  text-white"
                 >
-                    Page 1
+                  Page {currPage}
                 </button>
             </div>
             )}
