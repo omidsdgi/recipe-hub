@@ -43,6 +43,15 @@ const SearchResult = ({results, isLoading}: SearchResultProps) => {
                     </li>
                 ))}
             </ul>
+            <div className="flex justify-center px-6 py-6">
+                <button
+                type="button"
+                className="rounded-full bg-primary px-6 py-3 text-xl font-semibold  text-white"
+                >
+                    Page 1
+                </button>
+            </div>
+
         </section>
     );
 };
