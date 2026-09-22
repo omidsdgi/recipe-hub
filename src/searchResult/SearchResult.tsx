@@ -1,5 +1,6 @@
 import {Spinner} from "@/components";
 import {SearchResultType} from "@/services/RecipeService";
+import {RESULTS_PER_PAGE} from "@/config/constants";
 
 interface SearchResultProps {
     results: SearchResultType[];
@@ -43,6 +44,7 @@ const SearchResult = ({results, isLoading}: SearchResultProps) => {
                     </li>
                 ))}
             </ul>
+            {results.length > RESULTS_PER_PAGE && (
             <div className="flex justify-center px-6 py-6">
                 <button
                 type="button"
@@ -51,7 +53,7 @@ const SearchResult = ({results, isLoading}: SearchResultProps) => {
                     Page 1
                 </button>
             </div>
-
+            )}
         </section>
     );
 };
