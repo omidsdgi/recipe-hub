@@ -72,7 +72,7 @@ const SearchResult = ({results, isLoading}: SearchResultProps) => {
                     <button
                         type="button"
                         onClick={() => setCurrPage(currPage => currPage + 1)}
-                        className="rounded-full bg-primary px-6 py-3 text-xl font-semibold  text-white"
+                        className="ml-auto gap-2 rounded-full bg-primary px-6 py-3 text-xl font-semibold  text-white"
                     >
                         <div className="flex items-center justify-center gap-5">
                             Page {currPage + 1}
