@@ -2,6 +2,7 @@ import {Spinner} from "@/components";
 import {SearchResultType} from "@/services/RecipeService";
 import {RESULTS_PER_PAGE} from "@/config/constants";
 import {useEffect, useState} from "react";
+import {ArrowLeft, ArrowRight} from "lucide-react";
 
 interface SearchResultProps {
     results: SearchResultType[];
@@ -54,25 +55,31 @@ const SearchResult = ({results, isLoading}: SearchResultProps) => {
                 ))}
             </ul>
             {totalPages > 1 && (
-            <div className="flex items-center justify-center gap-4 px-6 py-6">
+            <div className="w-full flex items-center justify-between px-6 py-6">
                 {currPage > 1 && (
                 <button
                     type="button"
                     onClick={() => setCurrPage(currPage=>currPage - 1)}
                     className='rounded-full bg-primary px-6 py-3 text-xl font-semibold  text-white'
                 >
+                    <div className="flex items-center justify-center gap-5">
+                   <ArrowLeft className='size-5'/>
                     Page{currPage -1}
+                    </div>
                 </button>
                     )}
                 {currPage < totalPages && (
-                <button
-                type="button"
-                onClick={() => setCurrPage(currPage=>currPage + 1)}
-                className="rounded-full bg-primary px-6 py-3 text-xl font-semibold  text-white"
-                >
-                  Page {currPage +1}
-                </button>
-                )}
+                    <button
+                        type="button"
+                        onClick={() => setCurrPage(currPage => currPage + 1)}
+                        className="rounded-full bg-primary px-6 py-3 text-xl font-semibold  text-white"
+                    >
+                        <div className="flex items-center justify-center gap-5">
+                            Page {currPage + 1}
+                            <ArrowRight className='size-5'/>
+                    </div>
+                    </button>
+                    )}
             </div>
             )}
         </section>
