@@ -53,8 +53,9 @@ const SearchResult = ({results, isLoading}: SearchResultProps) => {
                     </li>
                 ))}
             </ul>
-            {results.length > RESULTS_PER_PAGE && (
+            {totalPages > 1 && (
             <div className="flex items-center justify-center gap-4 px-6 py-6">
+                {currPage > 1 && (
                 <button
                     type="button"
                     onClick={() => setCurrPage(currPage=>currPage - 1)}
@@ -62,6 +63,8 @@ const SearchResult = ({results, isLoading}: SearchResultProps) => {
                 >
                     Page{currPage -1}
                 </button>
+                    )}
+                {currPage < totalPages && (
                 <button
                 type="button"
                 onClick={() => setCurrPage(currPage=>currPage + 1)}
@@ -69,6 +72,7 @@ const SearchResult = ({results, isLoading}: SearchResultProps) => {
                 >
                   Page {currPage +1}
                 </button>
+                )}
             </div>
             )}
         </section>
