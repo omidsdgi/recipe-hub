@@ -1,7 +1,7 @@
 import {Spinner} from "@/components";
 import {SearchResultType} from "@/services/RecipeService";
 import {RESULTS_PER_PAGE} from "@/config/constants";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 interface SearchResultProps {
     results: SearchResultType[];
@@ -15,6 +15,8 @@ const SearchResult = ({results, isLoading}: SearchResultProps) => {
     const endIndex=startIndex + RESULTS_PER_PAGE;
 
     const currentPageResults = results.slice(startIndex, endIndex);
+
+    const totalPages= Math.ceil(results.length / RESULTS_PER_PAGE);
     if (isLoading) {
         return (
             <section className="bg-secondary">
