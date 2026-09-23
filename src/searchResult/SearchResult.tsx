@@ -52,13 +52,20 @@ const SearchResult = ({results, isLoading}: SearchResultProps) => {
                 ))}
             </ul>
             {results.length > RESULTS_PER_PAGE && (
-            <div className="flex justify-center px-6 py-6">
+            <div className="flex items-center justify-center gap-4 px-6 py-6">
+                <button
+                    type="button"
+                    onClick={() => setCurrPage(currPage=>currPage - 1)}
+                    className='rounded-full bg-primary px-6 py-3 text-xl font-semibold  text-white'
+                >
+                    Page{currPage -1}
+                </button>
                 <button
                 type="button"
-                onClick={() => setCurrPage(currPage + 1)}
+                onClick={() => setCurrPage(currPage=>currPage + 1)}
                 className="rounded-full bg-primary px-6 py-3 text-xl font-semibold  text-white"
                 >
-                  Page {currPage}
+                  Page {currPage +1}
                 </button>
             </div>
             )}
