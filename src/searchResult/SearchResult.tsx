@@ -35,14 +35,14 @@ const SearchResult = ({results, isLoading}: SearchResultProps) => {
                     <li key={recipe.id}>
                         <a
                             href={`#${encodeURIComponent(recipe.id)}`}
-                            className="group flex items-center gap-6 px-4 py-5 transition-colors hover:bg-muted"
+                            className="group flex min-w-0 items-center gap-6 px-4 py-5 transition-colors hover:bg-muted"
                         >
                             <img
                                 src={recipe.image}
                                 alt={recipe.title}
                                 className="size-20 shrink-0 rounded-full object-cover"
                             />
-                            <div className="min-w-0">
+                            <div className="min-w-0 flex-1">
                                 <h4 className="truncate text-2xl font-semibold text-foreground group-hover:text-primary">
                                     {recipe.title}
                                 </h4>

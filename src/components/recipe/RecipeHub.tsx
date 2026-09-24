@@ -10,7 +10,7 @@ const RecipeHub = () => {
     return (
         <>
             <Header onSearch={search} isSearchLoading={isLoading}/>
-            <main className="grid min-h-[107rem] grid-cols-[1fr_2fr]">
+            <main className="grid min-h-[107rem] grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
                 <RecipePage
                     results={results}
                     isSearchLoading={isLoading}
