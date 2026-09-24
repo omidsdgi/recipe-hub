@@ -29,8 +29,8 @@ const SearchResult = ({results, isLoading}: SearchResultProps) => {
     if (!results.length) return null;
 
     return (
-        <section className="bg-card bg-section p-8 text-3xl">
-            <ul className="bg-section px-6 py-8">
+        <section className="flex h-full flex-col w-full bg-card bg-section p-8 text-3xl">
+            <ul className="w-full flex-1 bg-section px-6 py-8">
                 {currentPageResults.map((recipe) => (
                     <li key={recipe.id}>
                         <a
@@ -55,7 +55,7 @@ const SearchResult = ({results, isLoading}: SearchResultProps) => {
                 ))}
             </ul>
             {totalPages > 1 && (
-            <div className="w-full flex items-center justify-between px-6 py-6">
+            <div className=" mt-auto w-full flex items-center justify-between px-6 py-6">
                 {currPage > 1 && (
                 <button
                     type="button"
